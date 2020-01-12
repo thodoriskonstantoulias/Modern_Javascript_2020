@@ -80,3 +80,21 @@
 
 // console.log(date);
 // console.log(val); 
+
+// 9 -- Functions
+//Function declarations
+// function greet(firstname = 'Ted'){
+//     console.log('Hello ' + firstname);
+// }
+// greet('John');
+
+//Function expressions
+// const square = function(x){
+//     console.log(x*x);
+// };
+// square(3);
+
+//Imidiately invokable function expressions
+// (function(){
+//     console.log('IIFE running');
+// })();
