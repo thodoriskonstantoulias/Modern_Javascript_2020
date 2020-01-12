@@ -98,3 +98,37 @@
 // (function(){
 //     console.log('IIFE running');
 // })();
+
+// 10 -- Window Object
+// const input = prompt();
+// alert(input);
+// let val; 
+// val = window.outerHeight;
+// val = window.location;
+// val = window.location.href = 'http://google.com';
+// val = window.history.length;
+// val = window.navigator;
+
+// console.log(val);
+
+// 11 -- Scope 
+var a = 1; 
+let b = 2;
+const c = 3;
+
+function test(){
+    var a = 4; 
+    let b = 5;
+    const c = 6;
+    console.log('Function score : ' + a,b,c);
+}
+//test();
+
+//Block scope 
+if (true){
+    var a = 4; 
+    let b = 5;
+    const c = 6;
+}
+
+console.log('Global scope : ' + a,b,c);
