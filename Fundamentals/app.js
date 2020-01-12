@@ -45,3 +45,28 @@
 // val = Math.random();
 
 // console.log(val);
+
+// 6 -- Template literals
+
+// const name = 'Ted';
+// const age = 28;
+// const job = 'Software Engineer';
+// let html;
+
+// Without template strings (es5) 
+// html = '<h4>Name : ' + name + '</h4>';
+
+// With template strings (es6) 
+// html = `
+//     <h4>My name is ${name}</h4>
+// `;
+
+// document.body.innerHTML = html;
+
+// 7 -- Object literals
+// const person = {
+//     firstname : 'Ted',
+//     lastname : 'Kos'
+// };
+
+// console.log(person.firstname);
