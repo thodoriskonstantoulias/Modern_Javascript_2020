@@ -70,3 +70,13 @@
 // };
 
 // console.log(person.firstname);
+
+// 8 -- Dates
+// let val; 
+// const date = new Date();
+// val = date.getDate();
+// val = date.getDay();
+// val = date.getFullYear();
+
+// console.log(date);
+// console.log(val); 
