@@ -60,3 +60,27 @@
 // document.querySelector('ul.collection').appendChild(li);
 
 // console.log(li);
+
+// 6a -- Replacing elements
+// const newHeading = document.createElement('h2');
+// newHeading.id = 'task-title';
+// newHeading.appendChild(document.createTextNode('Task List'));
+
+// const oldHeading = document.getElementById('task-title');
+// const cardAction = document.querySelector('.card-action');
+// cardAction.replaceChild(newHeading,oldHeading);
+
+// 6b -- Remove elements
+// const lis = document.querySelectorAll('li');
+// const list = document.querySelector('ul');
+
+// lis[0].remove();
+// list.removeChild(lis[3]);
+
+// 7 -- Event listeners
+// document.querySelector('.clear-tasks').addEventListener('click', function(e){
+//     console.log('Button pressed');
+//     console.log(e.type);
+//Prevent default behavior of a link that redirects to page
+//     e.preventDefault();
+// });
