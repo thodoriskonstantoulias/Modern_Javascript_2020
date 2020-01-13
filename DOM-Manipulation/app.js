@@ -115,3 +115,21 @@
 //     console.log(taskInput.value);
 //     e.preventDefault();
 // }
+
+// 10a -- Event bubbling
+// document.querySelector('.card-title').addEventListener('click',function(){
+//     console.log('card title');
+// });
+// document.querySelector('.card-content').addEventListener('click',function(){
+//     console.log('card content');
+// });
+
+// 10b -- Event delegation
+// document.body.addEventListener('click', deleteItem);
+
+// function deleteItem(e){   
+//     if(e.target.parentElement.classList.contains('delete-item')){
+//         console.log('delete item');
+//         e.target.parentElement.parentElement.remove();
+//     } 
+// }
