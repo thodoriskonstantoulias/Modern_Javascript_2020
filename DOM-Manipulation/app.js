@@ -84,3 +84,34 @@
 //Prevent default behavior of a link that redirects to page
 //     e.preventDefault();
 // });
+
+// 8 -- Mouse events 
+// const clearBtn = document.querySelector('.clear-tasks');
+// const card = document.querySelector('.card');
+// const heading = document.querySelector('h5');
+
+//clearBtn.addEventListener('click', runEvent);
+//clearBtn.addEventListener('mousedown', runEvent);
+//clearBtn.addEventListener('mouseenter', runEvent);
+// card.addEventListener('mousemove', runEvent);
+
+// function runEvent(e){
+//     console.log(`Event type : ${e.type}`)
+
+//     heading.textContent = `MouseX : ${e.offsetX} MouseY : ${e.offsetY}`;
+// }
+
+// 9 -- Keyboard events
+// const form = document.querySelector('form');
+// const taskInput = document.getElementById('task');
+
+//form.addEventListener('submit',runEvent);
+//taskInput.addEventListener('keydown',runEvent);
+//taskInput.addEventListener('focus',runEvent);
+//taskInput.addEventListener('input',runEvent);
+
+// function runEvent(e){
+//     console.log(`Event type : ${e.type}`);
+//     console.log(taskInput.value);
+//     e.preventDefault();
+// }
