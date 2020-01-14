@@ -9,13 +9,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <style>
+        #alert-message {
+            display: none;
+        }
+        #loading, #results{
+            display: none;
+        }
+    </style>
   </head>
   <body class="bg-dark">
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="card card-body text-center mt-5">
-                    <div id="alert-message" class="alert alert-danger" style="display: none;">Check your numbers</div>
+                    <div id="alert-message" class="alert alert-danger">Check your numbers</div>
                     <h1 class="heading display-5 pb-3">
                         Loan Calculator
                     </h1>
@@ -40,9 +48,9 @@
                         </div>
                     </form>
                     <!-- LOADER HERE -->
-                    <!-- <div id="loading">
+                    <div id="loading">
                         <img src="img/loading.gif" alt="">
-                    </div> -->
+                    </div>
 
                     <div id="results">
                         <h5>Results</h5>
