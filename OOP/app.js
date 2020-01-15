@@ -38,3 +38,24 @@
 // console.log(per);
 // //We can use Object Prototypes too 
 // console.log(per.hasOwnProperty('firstName'));
+
+// 4 -- Prototype inheritance
+// function Person(firstName,lastName){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+// }
+
+// Person.prototype.fullName = function(){
+//     return this.firstName + ' ' + this.lastName;
+// }
+
+// function Customer(firstName,lastName,phone){
+//      Person.call(this,firstName,lastName);
+//      this.phone = phone;
+// }
+
+// Customer.prototype = Object.create(Person.prototype);
+// //Also if we want we can overwrite the inherited function by declaring it with the same name ...
+// const cust = new Customer('Ted','Konst',444);
+// console.log(cust.fullName());
+
