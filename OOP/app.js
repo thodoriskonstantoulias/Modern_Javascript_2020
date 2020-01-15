@@ -18,3 +18,23 @@
 // console.log(name2);
 // console.log(typeof name2);
 //The same happens with numbers, boolean, functions, objects, arrays, regex
+
+// 3 -- Prototypes
+// function Person(firstName,lastName,age){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//     // this.fullName = function(){
+//     //     return this.firstName + ' ' + this.lastName;
+//     // }
+//}
+
+// //We can move common code for instances in a Prototype
+// Person.prototype.fullName = function(){
+//     return this.firstName + ' ' + this.lastName;
+// }
+
+// let per = new Person('Ted','Kos',28);
+// console.log(per);
+// //We can use Object Prototypes too 
+// console.log(per.hasOwnProperty('firstName'));
