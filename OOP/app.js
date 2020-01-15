@@ -58,4 +58,32 @@
 // //Also if we want we can overwrite the inherited function by declaring it with the same name ...
 // const cust = new Customer('Ted','Konst',444);
 // console.log(cust.fullName());
+// 5 -- Classes and Subclasses
+// class Person {
+//     constructor(firstname,lastname){
+//         this.firstname = firstname;
+//         this.lastname = lastname;
+//     }
 
+//     fullName(){
+//         return `Hello there ${this.firstname} ${this.lastname}`;
+//     }
+
+//     static addNumbers(x,y){
+//         return x + y;
+//     }
+// }
+
+// class Customer extends Person{
+//     constructor(firstname,lastname,phone){
+//         super(firstname,lastname);
+//         this.phone = phone;
+//     }
+// }
+
+// const ted = new Person('Ted','Kos');
+// const cust = new Customer('Kostas', 'Kos', 444);
+// console.log(ted.fullName());
+// console.log(Person.addNumbers(1,2));
+// console.log(cust.phone);
+// console.log(cust.fullName());
