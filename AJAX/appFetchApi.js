@@ -4,24 +4,24 @@ document.getElementById('button3').addEventListener('click', getExternal);
 
 function getText(){
     fetch('data.txt')
-    .then(function(res){
+    .then((res) => {
         return res.text();
     })
-    .then(function(data){
+    .then((data) => {
         console.log(data);
         document.getElementById('output').innerHTML = data;
     })
-    .catch(function(err){
+    .catch((err) => {
         console.log(err);
     });    
 }
 
 function getJson(){
     fetch('customers.json')
-    .then(function(res){
+    .then((res) => {
         return res.json();
     })
-    .then(function(data){
+    .then((data) => {
         console.log(data);
         let output = '';
         data.forEach(function(customer){
@@ -29,25 +29,25 @@ function getJson(){
         });
         document.getElementById('output').innerHTML = output;
     })
-    .catch(function(err){
+    .catch((err) => {
         console.log(err);
     });    
 }
 
 function getExternal(){
     fetch('https://api.github.com/users')
-    .then(function(res){
+    .then((res) => {
         return res.json();
     })
-    .then(function(data){
+    .then((data) => {
         console.log(data);
         let output = '';
-        data.forEach(function(user){
+        data.forEach((user) => {
             output += `<li>${user.login}</li>`
         });
         document.getElementById('output').innerHTML = output;
     })
-    .catch(function(err){
+    .catch((err) => {
         console.log(err); 
     });    
 }
