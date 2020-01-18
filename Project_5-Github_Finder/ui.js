@@ -30,4 +30,35 @@ class UI {
             <div id="repos"></div>
         `;
     }
+
+    showAlert(msg, className){
+        //Clear previous alerts
+        this.clearAlert();
+
+        const div = document.createElement('div');
+        div.className = className;
+        div.appendChild(document.createTextNode(msg));
+
+        const container = document.querySelector('.searchContainer');
+        const search = document.querySelector('.search');
+
+        container.insertBefore(div,search);
+
+        //Clear the alert after 3 seconds
+        setTimeout(() => {
+            this.clearAlert();
+        }, 3000);
+    }
+
+    clearAlert(){
+        const currentAlert = document.querySelector('.alert');
+
+        if (currentAlert) {
+            currentAlert.remove();
+        }
+    }
+
+    clearProfile(){
+        this.profile.innerHTML = '';
+    }
 }
