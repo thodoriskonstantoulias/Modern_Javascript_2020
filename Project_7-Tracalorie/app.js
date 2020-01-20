@@ -57,7 +57,7 @@ const UICtrl = (function(){
 
             items.forEach(function(item){
                 html += `
-                    <li id="item-${item.id}" class="collection-item"><strong>${item.name}</strong><em>${item.calories}</em>
+                    <li id="item-${item.id}" class="collection-item"><strong>${item.name}: </strong><em>${item.calories} Calories</em>
                         <a href="#" class="secondary-content"><i class="edit-item fa fa-pencil"></i></a>
                     </li>
                 `; 
@@ -71,6 +71,19 @@ const UICtrl = (function(){
                 name : document.querySelector(UISelectors.itemNameInput).value,
                 calories : document.querySelector(UISelectors.itemCaloriesInput).value
             }
+        },
+        addListItem : function(item){
+            const li = document.createElement('li');
+            li.className = 'collection-item';
+            li.id = `item-${item.id}`;
+            li.innerHTML = `<strong>${item.name}: </strong><em>${item.calories} Calories</em>
+            <a href="#" class="secondary-content"><i class="edit-item fa fa-pencil"></i></a>`;
+
+            document.querySelector(UISelectors.itemList).insertAdjacentElement('beforeend',li);
+        },
+        clearInput : function(){
+            document.querySelector(UISelectors.itemNameInput).value = '';
+            document.querySelector(UISelectors.itemCaloriesInput).value = '';
         },
         getSelectors : function(){
             return UISelectors;
@@ -92,6 +105,10 @@ const App = (function(ItemCtrl,UICtrl){
         if (input.name !== '' && input.calories !== ''){
             //Add item
             const newItem = ItemCtrl.addItem(input.name,input.calories);
+            //Add item to UI
+            UICtrl.addListItem(newItem);
+            //Clear fields
+            UICtrl.clearInput();
         }
 
         e.preventDefault();
@@ -105,3 +122,5 @@ const App = (function(ItemCtrl,UICtrl){
         }
     }
 })(ItemCtrl,UICtrl);
+
+App.init();
