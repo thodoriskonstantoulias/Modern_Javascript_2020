@@ -15,6 +15,9 @@ const ItemCtrl = (function(){
     }
 
     return {
+        getItems : function(){
+            return data.items;
+        },
         logData : function(){
             return data;
         }
@@ -23,14 +26,30 @@ const ItemCtrl = (function(){
 
 //UI Controller
 const UICtrl = (function(){
+    return {
+        populateItemList : function(items){
+            let html = '';
 
+            items.forEach(function(item){
+                html += `
+                    <li id="item-${item.id}" class="collection-item"><strong>${item.name}</strong><em>${item.calories}</em>
+                        <a href="#" class="secondary-content"><i class="edit-item fa fa-pencil"></i></a>
+                    </li>
+                `; 
+            });
+
+            //Insert list items
+            document.querySelector('#item-list').innerHTML = html;
+        }
+    }
 })();
 
 //App Controller
 const App = (function(ItemCtrl,UICtrl){
     return {
         init : function(){
-
+            const items = ItemCtrl.getItems();
+            UICtrl.populateItemList(items);
         }
     }
 })(ItemCtrl,UICtrl);
