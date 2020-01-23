@@ -10,7 +10,8 @@ class EasyHTTP{
                 method : 'POST',
                 headers : {
                     'Content-type' : 'application/json'
-                },              
+                },     
+                body : JSON.stringify(data)         
             });        
             const resdata = await response.json();
             return resdata;
