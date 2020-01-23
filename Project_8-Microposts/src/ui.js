@@ -57,6 +57,40 @@ class UI {
         this.titleInput.value = '';
         this.bodyInput.value= '';
     }
+
+    fillForm(data){
+        this.titleInput.value = data.title;
+        this.bodyInput.value= data.body;
+        this.idInput.value = data.id;
+
+        this.changeFormState('edit');
+    }
+
+    changeFormState(state){
+        if (state === 'edit'){
+            this.postSubmit.textContent = 'Update Post';
+            this.postSubmit.className = 'post-submit btn btn-warning btn-block';
+
+            //Create cancel button
+            const button = document.createElement('button');
+            button.className = 'post-cancel btn btn-light btn-block';
+            button.appendChild(document.createTextNode('Cancel Edit'));
+
+            const cardForm = document.querySelector('.card-form');
+            const formEnd = document.querySelector('.form-end');
+            cardForm.insertBefore(button,formEnd);
+        } else {
+            this.postSubmit.textContent = 'Post it';
+            this.postSubmit.className = 'post-submit btn btn-primary btn-block';
+            //Remove cancel button
+            if (document.querySelector('.post-cancel')){
+                document.querySelector('.post-cancel').remove();
+            }
+            //Clear ID from hidden field
+            this.idInput.value = '';
+            this.clearFields();
+        }
+    }
 }
 
 export const ui = new UI();
