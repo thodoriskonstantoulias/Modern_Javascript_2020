@@ -1,11 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "Post One",
-      "body": "Body of Post 1"
-    },
-    {
       "id": 2,
       "title": "Post Two",
       "body": "Body of Post 2"
@@ -29,21 +24,6 @@
       "title": "fds",
       "body": "aaass",
       "id": 6
-    },
-    {
-      "title": "sdf",
-      "body": "sdads",
-      "id": 7
-    },
-    {
-      "title": "With data labels",
-      "body": ";lklp;",
-      "id": 8
-    },
-    {
-      "title": "sdfs",
-      "body": "sdfsf",
-      "id": 9
     }
   ]
 }
